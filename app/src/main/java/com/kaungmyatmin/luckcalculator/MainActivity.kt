@@ -1,6 +1,7 @@
 package com.kaungmyatmin.luckcalculator
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -66,7 +67,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnCalculate.setOnClickListener {
-
+            val intent = Intent(this, ResultActivity::class.java)
+            startActivity(intent)
         }
     }
     //endregion
