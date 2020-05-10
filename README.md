@@ -2,7 +2,14 @@
 An android application that calculate the lucky number base on user input date.
 >This application is for educational purpose only and will not be used for any commericial use.
 
-## Screenshots
+### Main purposes of this lesson
+- Activity lifecyle and state management
+- Navigation between screens (Activities)
+- Managing different ui between portrait mode and landscape mode
+- navigation and intent
+
+
+### Screenshots
 | Start Screen | Date Picker | Result Screen |
 | ---- | ---- | ----|
 |<image src="./screenshots/ss_start.jpg"/>|<image src="./screenshots/ss_date_picker.jpg"/>|<image src="./screenshots/ss_result.jpg"/>|
