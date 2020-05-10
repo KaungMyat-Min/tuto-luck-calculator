@@ -59,15 +59,18 @@ class MainActivity : AppCompatActivity() {
     private fun setListeners() {
 
         lblDob.setOnClickListener {
-
+            datePickerDialog.show()
         }
 
         tvDob.setOnClickListener {
-
+            datePickerDialog.show()
         }
 
         btnCalculate.setOnClickListener {
             val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("year", year)
+            intent.putExtra("month", month)
+            intent.putExtra("day", day)
             startActivity(intent)
         }
     }
