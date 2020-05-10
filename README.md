@@ -6,7 +6,7 @@ An android application that calculate the lucky number base on user input date.
 - Activity lifecyle and state management
 - Navigation between screens (Activities)
 - Managing different ui between portrait mode and landscape mode
-- navigation and intent
+- Accessing string files at run time
 
 
 ### Screenshots
