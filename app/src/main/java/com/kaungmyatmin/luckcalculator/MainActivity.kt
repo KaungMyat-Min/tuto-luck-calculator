@@ -23,12 +23,35 @@ class MainActivity : AppCompatActivity() {
     //endregion
 
 
-
+    //region activity override methods
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        createMediaPlayer()
+        currentPlayerPosition = savedInstanceState?.getInt("currentPosition", 0) ?: 0
         setListeners()
     }
+
+    override fun onResume() {
+        super.onResume()
+        resumePlayer(currentPlayerPosition)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        pausePlayer()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("currentPosition", currentPlayerPosition)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        releasePlayer()
+    }
+    //endregion
 
 
     //region set up listeners
